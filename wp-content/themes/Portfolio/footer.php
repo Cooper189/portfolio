@@ -12,6 +12,11 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo('template_url')?>/js/script.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('#head').responsiveBlock();
+		});
+	</script>
 <?php wp_footer(); ?>		
 </body>
 </html>

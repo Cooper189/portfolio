@@ -226,3 +226,21 @@ body {
 #footer .page-footstrap ul li:first-child {
   padding-left: 0;
 }
+  #head .hea ul {
+      position: relative !important;
+      width: 745px !important;
+      height: 500px ;
+      border: 2px solid grey;
+      margin: 0;
+      padding: 0;
+    }
+     #head .hea ul li {
+      position: absolute;
+      top: 0;
+      left: 0;opacity: 0;
+    }
+   #head img {
+      width: 745px !important;
+      height: 500px;
+      
+    }

@@ -8,6 +8,7 @@ function load_style_script () {
     wp_enqueue_script( 'jquery' );
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_script('script', get_template_directory_uri() . '/js/popup-script.js' );
+	wp_enqueue_script('script_slide', get_template_directory_uri() . '/js/ass.js');
 }
 /**
 *Instal script and style
