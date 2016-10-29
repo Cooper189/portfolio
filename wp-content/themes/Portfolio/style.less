@@ -1,0 +1,250 @@
+﻿@bg-color: #0096b5;
+@white-color: #ffffff;
+@body-bg: #EFEFEF;
+@cont-bg: rgba(0,0,0, 0.7);
+@black-color: #000000;
+@font-color: #737373;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+	box-sizing: border-box;
+	background-color: @body-bg;
+}
+#overlay {	
+			display: none;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			opacity: 0.5;
+			z-index: 999;
+			position: fixed;
+			top: 0;
+			right: 0;
+
+
+		}
+#box {
+		position: fixed;
+		z-index: 1000;
+		max-width: 1200px;
+		top: 20%;
+		right: 20%;
+		bottom: 20%;
+		left: 20%;
+		background-color: @white-color;
+		overflow: auto!important;
+		display: none;
+		img {
+			width: 100%;
+		}
+
+
+}
+#header {
+	background-color: @white-color;
+	.top-header {
+		width: 100%;
+		max-width: 1500px;
+		margin: 0 auto;
+		position: relative;
+		#mobil-contacts {
+			padding: 0.5em;
+			text-align: center;
+			display: none;
+		}
+		.popup {
+			background-color: @white-color;
+			width:50%;
+			max-width: 250px;
+			border-bottom-right-radius: 0.5em;
+			border-bottom-left-radius: 0.5em;
+			position: absolute;
+			z-index: 100;
+			padding: 0.2em;
+			right: 6%;
+			top: 99%;
+			box-shadow: 0 10px 10px @black-color;
+			display: none;
+		}
+		.contact {
+			font-size: 1.5em;
+			padding: 0.5em;
+			font-weight: 800;
+			border: 4px solid @black-color;
+			position: absolute;
+			cursor: pointer;
+			border-radius: 15px;
+			background-color: #000;
+			color: #fff;
+			bottom: 15%;
+			right: 10%;
+		}
+		.logo {
+			margin-left: 5%;
+			font-size: 0;
+			min-width: 260px;
+			background-color: @black-color;
+			display: inline-block;
+			width: 25%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#conteiner {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1) inset; 
+	width: 100%;
+}
+
+#content {
+	.block-content-single {
+		width: 100%;
+		text-align: center;
+		img {
+			width: 100%!;
+			border: 2px solid #0096b5;
+		}
+	}
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1500px;
+	overflow: hidden;
+	 ul {
+	 	margin: 0;
+	 	padding: 0;
+	 	li {
+	 		.button-box {
+	 			background-color: @white-color;
+	 			position: absolute;
+	 			top: 43%;
+	 			right: 43%;
+	 			margin: 0 auto;
+	 			cursor: pointer;
+	 			border-radius: 50%;
+	 			padding-left: 12px;
+	 			padding-right: 12px;
+	 			padding-bottom: 6px;
+	 			display: inline-block;
+	 			color: @black-color;
+	 			font-size: 3em;
+	 			z-index: 1000;
+	 		}
+	 		img {
+	 			width: 100%;
+	 		}
+	 		margin-bottom: -4px;
+	 		position: relative;
+	 		list-style: none;
+	 		width: 33.3%;
+	 		display: block;
+	 		float: left;
+	 		background-color: @bg-color;
+	 		box-sizing: border-box;
+	 		text-align: center;
+	 		&:hover .block-content {
+	 			display: block;
+	 		}
+	 		.block-content {
+	 			position: absolute;
+	 			top: 0;
+	 			right: 0;
+	 			bottom: 0;
+	 			left: 0;
+				background-color: @cont-bg;
+				display: none;
+				color: @white-color;
+	 		}
+	 	}
+	 }
+}
+@media (max-width: 640px) {
+	#content {
+		ul{
+			li {
+				width: 100%;
+				.block-content {
+					display: block;
+					background-color: rgba(0,0,0, 0.4);
+				}
+			}
+		}
+	}
+	#header {
+		.top-header{
+			.popup {
+				display: none!important;
+			}
+			.logo {
+				margin: 0 auto;
+				display: block;
+				font-size: inherit;
+			}
+			.contact {
+				display: none;
+			}
+			#mobil-contacts {
+				display: block;
+			}
+		}
+	}
+	#footer {
+	.page-footstrap {
+			ul{
+				li{
+					padding: 0.5em!important;
+					display: block!important;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 640px) and (max-width: 992px) {
+	#content {
+		ul{
+			li {
+				width: 50%;
+			}
+		}
+	}
+}
+.foot-logo {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 200px;
+	background-color: @font-color;
+	img {
+		width: 100%;
+	}
+}
+#footer {
+	padding-top: 0.8em;
+	width: 100%;
+	background-color: @white-color;
+	.page-footstrap {
+		width: 100%;
+		max-width: 1500px;
+		margin: 0 auto;
+		ul {
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			li {
+				text-transform: uppercase;
+				color: @font-color;
+				font-size: 150%;
+				padding-top: 1.5em;
+				padding-bottom: 1.5em;
+				padding-left: 2.5em;
+				display: inline-block;
+				list-style: none;
+				&:first-child {
+				padding-left: 0;
+				}
+			}
+		}
+	}
+}
